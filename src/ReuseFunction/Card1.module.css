@@ -1,0 +1,8 @@
+.card{
+    border: green solid ;
+    width: 400px;
+}
+.cardImage{
+    height: 250px;
+    width: 400px;
+}

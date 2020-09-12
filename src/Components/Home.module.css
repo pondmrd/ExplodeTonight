@@ -1,8 +1,12 @@
 .home{
     padding-top: 70px;
-}
-.home div{
     
+}
+.headline1{
+    justify-content: center;
+    border: green solid;
+    width: 90%;
+    margin: auto;
 }
 .frame{
     display: flex;
@@ -34,4 +38,11 @@
     width: 250px;
     background: rgb(0, 60, 128);
     margin: 5px;
+}
+/* //////////////////// headline2 //////////////// */
+.headline2{
+    justify-content: center;
+    border: green solid;
+    width: 90%;
+    margin: auto;
 }

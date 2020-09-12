@@ -1,0 +1,9 @@
+.card{
+    border: green solid ;
+    width: 400px;
+    display: flex;
+}
+.cardImage{
+    height: 120px;
+    width: 200px;
+}
