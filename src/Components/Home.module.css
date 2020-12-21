@@ -1,61 +1,158 @@
 .home{
-    padding-top: 70px;
-    
+    /* padding-top: 175px; */
 }
-.headline1{
+/* .headline1{
     justify-content: center;
-    border: green solid;
+    height: 600px;
     width: 90%;
     margin: auto;
+    
+} */
+@media screen and (max-width: 900px){
+    .headline1{
+        justify-content: center;
+        height: auto;
+        width: 90%;
+        margin: auto;
+    }
+    .frame{
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    .frame1{
+        width: 100%;
+        height: 200px;
+        
+    }
+    .frame2{
+        margin-top: 5px;
+        width: 100%;
+    }
+    .frame3{
+        height: 200px;
+        width: 100%;
+        background: green;
+        overflow: hidden;
+    }
+    .frame4{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        margin-top: 5px;
+    }
+    .frame5{
+        height: 100%;
+        width: 50%;
+        background: rgb(0, 60, 128);
+        overflow: hidden;
+    }
+    .frame6{
+        height: 100%px;
+        width: 50%;
+        background: rgb(0, 60, 128);
+        margin-left: 5px;
+        overflow: hidden;
+    }
+    .down{
+        justify-content: center;
+        display: flex;
+        padding-left: 20px;
+        
+        /* border: black solid; */
+        
+    }
+    .bodyleft{
+        width: 100%;
+        /* border: green solid; */
+    }
+    .bodyright{
+        display: none;
+        
+        /* border: green solid; */
+    }
+    
 }
-.frame{
-    display: flex;
-    justify-content: center;
-}
-.frame1{
-    height: 400px;
-    width: 700px;
-    background: green;
-    margin: 5px;
-    overflow: hidden;
-}
-.frame3{
-    height: 200px;
-    width: 500px;
-    background: green;
-    margin: 5px;
-    overflow: hidden;
-}
-.frame4{
-    display: flex;
-}
-.frame5{
-    height: 200px;
-    width: 250px;
-    background: rgb(0, 60, 128);
-    margin: 5px;
-    overflow: hidden;
-}
-.frame6{
-    height: 200px;
-    width: 250px;
-    background: rgb(0, 60, 128);
-    margin: 5px;
-    overflow: hidden;
+@media screen and (min-width: 900px){
+    .headline1{
+        justify-content: center;
+        height: 600px;
+        width: 90%;
+        margin: auto;
+    }
+    .frame{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .frame1{
+        height: 100%;
+        width: 50%;
+        background: green;
+        margin: 5px;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    .frame2{
+        
+        width: 50%;
+    }
+    .frame3{
+        height: 50%;
+        width: 100%;
+        background: green;
+        
+        overflow: hidden;
+    }
+    .frame4{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        margin-top: 5px;
+    }
+    .frame5{
+        height: 100%;
+        width: 50%;
+        background: rgb(0, 60, 128);
+        
+        overflow: hidden;
+    }
+    .frame6{
+        height: 100%px;
+        width: 50%;
+        background: rgb(0, 60, 128);
+        margin-left: 5px;
+        overflow: hidden;
+    }
+    .down{
+        margin-top: 100px;
+        justify-content: center;
+        display: flex;
+        /* margin: auto; */
+    }
+    .bodyleft{
+        width: 65%;
+        /* border: green solid; */
+    }
+    .bodyright{
+        
+        width: 25%;
+        /* border: green solid; */
+    }
+    .headline2_child{
+        display: flex;
+    }
 }
 /* ///////////////////////bodyleft,right///////////////////// */
-.bodyleft{
-    width: 65%;
-    border: green solid;
-}
-.bodyright{
-    width: 25%;
-    border: green solid;
-}
+
 /* //////////////////// headline2 //////////////// */
 .headline2{
     justify-content: center;
-    border: green solid;
-    width: 90%;
+    border-bottom: green solid;
+    width: 100%;
+    height: auto;
     margin: auto;
 }

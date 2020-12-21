@@ -1,14 +1,11 @@
-.footer{
-    width: 90%;
-    border: rgb(128, 4, 0) solid;
-    margin: auto;
-    
+.footer{   
 }
 .footer1{
     display: flex;
-    
+    background-color: rgb(31, 21, 39);
     justify-content: center;
-    border: green solid;
+    border-bottom: solid rgb(31, 21, 39);
+    color: white;
 }
 .category{
     padding: 20px;
@@ -18,4 +15,12 @@
 }
 .tag{
     padding: 20px;
+}
+.footer2 h1{
+    color: white;
+    background-color: rgb(31, 21, 39);
+    margin: 0px;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 50;
 }

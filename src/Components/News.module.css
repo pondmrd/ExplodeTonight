@@ -1,0 +1,19 @@
+.table{
+    width: 90%;
+    content: "";
+    clear: both;
+    display: table;
+    margin: auto;
+}
+.table img{
+    width: 200px;
+    float: left;
+    padding: 20px;
+}
+.title{
+    text-decoration: none;
+    color: black;
+}
+.table p{
+    text-decoration: none;
+}

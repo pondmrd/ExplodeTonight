@@ -1,0 +1,17 @@
+.content{
+    width: 90%;
+    margin: auto;
+}
+.col_icon{
+    float: left;
+    padding: 5px;
+}
+.col_icon img{
+    width: 30px;
+
+}
+.row_icon::after{
+    content: "";
+    clear: both;
+    display: table;
+}

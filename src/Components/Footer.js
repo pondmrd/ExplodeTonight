@@ -16,9 +16,9 @@ class Footer extends Component {
                         <h3>tag</h3>
                     </div>
                 </div>
-                <hr/>
+                
                 <div className={Styles.footer2}>
-                    <h1>Explodetonight <span style={{fontSize:"20px"}}>@copyright</span></h1>
+                    <h1>Explodetonight <span style={{fontSize:"15px"}}>@copyright</span></h1>
                 </div>
             </div>
         )

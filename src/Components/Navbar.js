@@ -1,21 +1,32 @@
 import React, { Component } from 'react'
 import Styles from './Navbar.module.css'
 import logo from '../Images/frogy.jpg'
+import {Link, BrowserRouter as Router} from 'react-router-dom'
 
 class Navbar extends Component {
     render() {
         return (
+            
             <div className={Styles.navbar}>
-                <div className={Styles.logo}>
-                    <img src={logo}/>
+                <div className={Styles.head1}>
+                    <h1><i>Explode Tonight</i></h1>
+                    <div>
+                        <p> Login</p>
+                        <p> Register</p>
+                    </div>
+                    
                 </div>
-                <div className={Styles.menus}>
-                    <a className="active" href="#home">หน้าแรก</a>
-                    <a href="#news">ข่าวสาร</a>
-                    <a href="#contact">เกมส์</a>
-                    <a href="#about">รู้จักกับเรา</a>
+                <div className={Styles.head2}>
+                    <div className={Styles.menus}>
+                        <Link exact to='/'>หน้าแรก</Link>
+                        <Link to='/news'>ข่าวสาร</Link>
+                        <Link to='/games'>เกมส์</Link>
+                        <Link to='/aboutme'>รู้จักกับเรา</Link>
+                    </div>
                 </div>
+                
             </div>
+            
         )
     }
 }
