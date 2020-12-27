@@ -3,6 +3,10 @@ import Styles from './Navbar.module.css'
 import logo from '../Images/frogy.jpg'
 import {Link, BrowserRouter as Router} from 'react-router-dom'
 
+const toLogin = () =>{
+    return window.location.href='/login'
+}
+
 class Navbar extends Component {
     render() {
         return (
@@ -11,7 +15,8 @@ class Navbar extends Component {
                 <div className={Styles.head1}>
                     <h1 style={{border:"solid black 3px"}}><i>Explode Tonight</i></h1>
                     <div>
-                        <p> Login</p>
+                        {/* <Link to='/login'>Login</Link> */}
+                        <p onClick={toLogin}> Login</p>
                         <p> Register</p>
                     </div>
                     
