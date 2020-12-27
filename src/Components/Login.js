@@ -7,8 +7,8 @@ function Login(){
     return (
         <div>
             <h1> Welcome </h1>
-            <div className='inputform'>
-                <img src='frogy'></img>
+            <div className={Styles.inputform}>
+                <img src={frogy}></img>
                 <br/>
                 <label for='username'>Username</label>
                 <input type='text' id='username' />
