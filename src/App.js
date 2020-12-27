@@ -7,6 +7,7 @@ import Content from './Components/Content'
 import data from './Components/data'
 import News from './Components/News'
 import NotFound404 from './Components/NotFound404'
+import Login from './Components/Login'
 
 const content = () => 
   <Content title={data[0].title} date={data[0].date}
@@ -15,6 +16,7 @@ const content = () =>
 const home = () => <Home link1={data[0].link} />
 const news = () => <News />
 const notfound = () => <NotFound404/>
+const login = () => <Login />
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
           <Route exact path='/' component={home}/>
           <Route path = {data[0].link} component={content} />
           <Route path = '/news' component={news}/>
+          <Route path = '/login' component={login} />
           <Route path = '*' component={notfound}/>
         </Switch>  
         <Footer/>
