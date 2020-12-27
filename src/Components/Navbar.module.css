@@ -12,6 +12,7 @@
 }
 .head1 h1{
     color: white;
+    
     margin-top: 0px;
     padding-left: 10px;
     cursor: pointer;
@@ -55,5 +56,5 @@
 }
 .menus a:hover{
     border-bottom: 2px solid;
-    color: brown;
+    color: rgb(41, 197, 106);
 }

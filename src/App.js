@@ -25,7 +25,12 @@ function App() {
         <Switch>
           <Route exact path='/' component={home}/>
           <Route path = {data[0].link} component={content} />
+
           <Route path = '/news' component={news}/>
+          <Route path = '/news' >
+            <News />
+          </Route>
+
           <Route path = '*' component={notfound}/>
         </Switch>  
         <Footer/>

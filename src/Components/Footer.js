@@ -7,7 +7,7 @@ class Footer extends Component {
             <div className={Styles.footer}>
                 <div className={Styles.footer1}>
                     <div className={Styles.category}>
-                    <h3>category</h3>
+                        <h3>category</h3>
                     </div>
                     <div className={Styles.information}>
                         <h3>information</h3>
@@ -18,11 +18,14 @@ class Footer extends Component {
                 </div>
                 
                 <div className={Styles.footer2}>
-                    <h1>Explodetonight <span style={{fontSize:"15px"}}>@copyright</span></h1>
+                    <h1>Explodetonight <span style={teams}>@copyright</span></h1>
                 </div>
             </div>
         )
     }
 }
 
+const teams = {
+    fontSize:"15px",
+}
 export default Footer

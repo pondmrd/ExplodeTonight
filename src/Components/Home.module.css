@@ -75,7 +75,7 @@
     }
     
 }
-@media screen and (min-width: 900px){
+@media screen and (min-width: 900px) { 
     .headline1{
         justify-content: center;
         height: 600px;

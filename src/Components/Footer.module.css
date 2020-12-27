@@ -1,11 +1,13 @@
-.footer{   
+.footer{
+
 }
 .footer1{
+    border: solid rgb(236, 8, 8);
     display: flex;
-    background-color: rgb(31, 21, 39);
+    background-color: rgb(77, 36, 110) ;
     justify-content: center;
-    border-bottom: solid rgb(31, 21, 39);
-    color: white;
+    border-bottom: solid rgb(62, 182, 142);
+    color: rgb(255, 255, 255);
 }
 .category{
     padding: 20px;

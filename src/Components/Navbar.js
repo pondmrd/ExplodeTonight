@@ -9,11 +9,12 @@ class Navbar extends Component {
             
             <div className={Styles.navbar}>
                 <div className={Styles.head1}>
-                    <h1><i>Explode Tonight</i></h1>
+                    <h1 style={{border:"solid black 3px"}}><i>Explode Tonight</i></h1>
                     <div>
                         <p> Login</p>
                         <p> Register</p>
                     </div>
+                    
                     
                 </div>
                 <div className={Styles.head2}>

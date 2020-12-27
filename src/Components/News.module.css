@@ -1,8 +1,10 @@
 .table{
     width: 90%;
+    
     content: "";
     clear: both;
     display: table;
+
     margin: auto;
 }
 .table img{

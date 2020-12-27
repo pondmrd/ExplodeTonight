@@ -1,9 +1,10 @@
 .content{
     width: 90%;
-    margin: auto;
+    margin: auto; 
+    border: solid black;
 }
 .col_icon{
-    float: left;
+    float: left; 
     padding: 5px;
 }
 .col_icon img{
