@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Styles from './Login.module.css'
 import frogy from '../Images/frogy.jpg'
-// import React, { Component } from 'react'
 
 function Login(){
     return (
