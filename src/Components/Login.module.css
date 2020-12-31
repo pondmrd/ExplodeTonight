@@ -1,5 +1,75 @@
+.loginpage h1{
+    text-align: center;
+}
+
 .inputform{
-    border: solid red 5px;
-    width: 100%;
+    /* border: solid pink 5px; */
+    width: 75%;
+    margin: auto;
+    background-color: rgba(189, 178, 178, 0.4);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+.inputform img{
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form{
+    /* border: solid yellow 20px; */
+    display: flex;
     justify-content: center;
 }
+
+input[type=text]{
+    margin-bottom: 10px;    
+}
+
+input[type=password]{
+    margin-bottom: 15px;
+}
+
+.submitbutton{
+    /* border: solid orange 5px; */
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    background-color: var(--background-color);
+    color: #222;
+    padding: .5em 1em;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+
+    --background-color: rgb(98, 161, 233);
+    --border-size: 2px;
+}
+
+/* .btn:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 10;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    border: solid var(--background-color) var(--border-size);
+    transition: top, bottom, left, right, 100ms ease-in-out;
+    background-color: red;
+} 
+
+.btn:hover::before,
+.btn.btnBorderPop:focus::before{
+    top: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+} */
+
