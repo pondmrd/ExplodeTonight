@@ -42,4 +42,4 @@ mongoose.connect(process.env.DBUrl,
 );
 
 //listen
-app.listen(3000);
+app.listen(3030);

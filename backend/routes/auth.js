@@ -78,5 +78,9 @@ for LOGIN
     "password": "PondZa1234"
 }
 
+HEADER
+{
+    auth-token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmVmZWY3Y2E2NTk2NTQ1MTBjYTg5ZDkiLCJpYXQiOjE2MDk1NjQ2MTV9.6IHs4gNRD8sed_MXTkuYnSJ1hV_FnwX0MwhtDH2y8Fw
+}
 
 */
