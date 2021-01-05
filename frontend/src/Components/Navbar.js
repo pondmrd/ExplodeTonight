@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import Styles from './Navbar.module.css'
 import logo from '../Images/frogy.jpg'
 import {Link, BrowserRouter as Router} from 'react-router-dom'
-import axios from 'axios'
+
+//import axios from 'axios'
+const axios = require('axios').default;
 
 const toLogin = () =>{
     return window.location.href='/login';

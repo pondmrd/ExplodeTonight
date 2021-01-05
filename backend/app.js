@@ -7,10 +7,15 @@ const cors = require('cors');
 
 dotenv.config();
 
+const corsConfig = {
+    credentials: true,
+    origin: true,
+};
+
 //middlewares
 app.use(bodyParser.json());
 //app.use(express.json());
-app.use(cors());
+app.use(cors(corsConfig));
 
 /*############################## TEST CODE ########################################*/
 

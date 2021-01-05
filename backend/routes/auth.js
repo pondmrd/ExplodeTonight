@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { registerValidation, loginValidation } = require('../validation');
 const { valid } = require('@hapi/joi');
+const { maxAgeVal, createToken } = require('../createToken');
 
 router.post('/register', async (req, res) =>{
     //validation schema
@@ -53,11 +54,19 @@ router.post('/login', async (req, res) =>{
     const validPassword = await bcrypt.compare(req.body.password, user.password);
     if(!validPassword) return res.status(400).send("Password is wrong");
 
-    //Create and assign a tokoen
-    const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
-    res.header('auth-token', token).send(token);
+    //Create and assign a token
+    const token = createToken(user._id);
 
-    //res.send('Login');
+    //Set cookie
+    //maxAge in ms
+    res.cookie('auth-token', token, {
+        httpOnly: true,
+        maxAge: 1000 * maxAgeVal
+    });
+
+    //res.header('auth-token', token).send(token);
+
+    res.send('Login');
 });
 
 module.exports = router;

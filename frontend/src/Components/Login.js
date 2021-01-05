@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react'
 import Styles from './Login.module.css'
 import frogy from '../Images/frogy.jpg'
-import checkLogin from '../Manipulation/LoginManipulation'
+import manipulationObj from '../Manipulation/LoginManipulation'
 // import styled from 'styled-components'
 
 function Login(){
@@ -18,13 +18,15 @@ function Login(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // var resString = checkLogin(account.username, account.password) ? 'Welcome!': 'Please try again';
-        // alert(resString);
+        console.log(account.username, account.password);
 
-        // if(account.username=='POND' || account.username=='TEAM') alert('Welcome!')
-        // else{
-        //     alert('Please try again');
-        // }
+        /*var resString = checkLogin(account.username, account.password) ? 'Welcome!': 'Please try again';
+        alert(resString);*/
+        
+        manipulationObj.checkLogin(account.username, account.password);
+
+        //clear input form
+        setAccount({ username: "", password: "" })
     }
 
     return (
