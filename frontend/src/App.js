@@ -8,6 +8,7 @@ import data from './Components/data'
 import News from './Components/News'
 import NotFound404 from './Components/NotFound404'
 import Login from './Components/Login'
+import Register from './Components/Register'
 
 const content = () => 
   <Content title={data[0].title} date={data[0].date}
@@ -30,6 +31,7 @@ function App() {
 
           <Route path = '/news' component={news}/>
           <Route path = '/login' component={login} />
+          <Route path = '/register'><Register/></Route>
           <Route path = '*' component={notfound}/>
         </Switch>  
         <Footer/>

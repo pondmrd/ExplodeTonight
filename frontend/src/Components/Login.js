@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import Styles from './Login.module.css'
 import frogy from '../Images/frogy.jpg'
 import manipulationObj from '../Manipulation/LoginManipulation'
