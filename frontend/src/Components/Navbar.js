@@ -10,6 +10,10 @@ const toLogin = () =>{
     return window.location.href='/login';
 }
 
+const toRegister = () => {
+    return window.location.href='/register';
+}
+
 const testAxios = () =>{
     axios.get('http://localhost:3030/')
     .then(res =>{
@@ -36,17 +40,23 @@ const testAxios2 = () => {
     });
 }
 
-class Navbar extends Component {
-    render() {
+const Navbar = (props) => {
+
+    const toLogout = () => {
+        console.log('Log out!');
+        props.setNowLogin(false);
+    }
+        
         return (
             
             <div className={Styles.navbar}>
                 <div className={Styles.head1}>
-                    <h1 style={{border:"solid black 3px"}}><i>Explode Tonight</i></h1>
+                    <h1><i>Explode Tonight</i></h1>
                     <div>
                         {/* <Link to='/login'>Login</Link> */}
-                        <p onClick={toLogin}> Login</p>
-                        <p onClick={testAxios2}> Register</p>
+                        {/* {!props.nowLogin && <p onClick={toRegister}> Register</p>}
+                        {!props.nowLogin && <p onClick={toLogin}> Login</p>}
+                        {props.nowLogin && <p onClick={toLogout}>Logout</p>} */}
                     </div>
                     
                     
@@ -55,15 +65,18 @@ class Navbar extends Component {
                     <div className={Styles.menus}>
                         <Link exact to='/'>หน้าแรก</Link>
                         <Link to='/news'>ข่าวสาร</Link>
-                        <Link to='/games'>เกมส์</Link>
+                        {props.nowLogin && <Link to='/privateData'>ข้อมูลลับ</Link>}
                         <Link to='/aboutme'>รู้จักกับเรา</Link>
+                        {!props.nowLogin && <Link to='/register'>Register</Link>}
+                        {!props.nowLogin && <Link to='/login'>Login</Link>}
+                        {props.nowLogin && <Link to='/' onClick={toLogout}>Logout</Link>}
                     </div>
                 </div>
                 
             </div>
             
         )
-    }
+    
 }
 
 export default Navbar

@@ -4,7 +4,7 @@ import frogy from '../Images/frogy.jpg'
 import manipulationObj from '../Manipulation/LoginManipulation'
 // import styled from 'styled-components'
 
-function Login(){
+function Login(props){
     const [account, setAccount] = useState({username: '',
                                             password: ''});
 
@@ -23,7 +23,7 @@ function Login(){
         /*var resString = checkLogin(account.username, account.password) ? 'Welcome!': 'Please try again';
         alert(resString);*/
         
-        manipulationObj.checkLogin(account.username, account.password);
+        manipulationObj.checkLogin(account.username, account.password, props.setTokenValue, props.setNowLogin);
 
         //clear input form
         setAccount({ username: "", password: "" })

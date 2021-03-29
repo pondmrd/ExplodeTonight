@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 
 dotenv.config();
 
@@ -37,6 +38,14 @@ const authRoute = require('./routes/auth');
 app.use('/api/user', authRoute);
 
 /*############################## USER AUTHENTICATION ########################################*/
+
+/*############################## Private route ########################################*/
+
+const privateRoute = require('./routes/private');
+
+app.use('/api/user', privateRoute);
+
+/*############################## Private route ########################################*/
 
 //Connect to DB
 mongoose.connect(process.env.DBUrl,

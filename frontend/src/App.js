@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './Components/Navbar'
 import Home from './Components/Home'
 import Footer from './Components/Footer'
@@ -9,21 +9,28 @@ import News from './Components/News'
 import NotFound404 from './Components/NotFound404'
 import Login from './Components/Login'
 import Register from './Components/Register'
+import SecretData from './Components/SecretData'
 
-const content = () => 
+function App() {
+
+  const [tokenValue, setTokenValue] = useState('');
+  const [nowLogin, setNowLogin] = useState(true);
+
+  const content = () => 
   <Content title={data[0].title} date={data[0].date}
     desc={data[0].desc} story={data[0].story} />;
 
-const home = () => <Home link1={data[0].link} />
-const news = () => <News />
-const notfound = () => <NotFound404/>
-const login = () => <Login />
+  const home = () => <Home link1={data[0].link} />
+  const news = () => <News />
+  const notfound = () => <NotFound404/>
+  const login = () => <Login setTokenValue={setTokenValue} 
+                             setNowLogin={setNowLogin} />
 
-function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar/>
+        <Navbar nowLogin={nowLogin}
+                setNowLogin={setNowLogin} />
         <div style={{paddingTop: "175px"}}></div>
         <Switch>
           <Route exact path='/' component={home}/>
@@ -32,6 +39,9 @@ function App() {
           <Route path = '/news' component={news}/>
           <Route path = '/login' component={login} />
           <Route path = '/register'><Register/></Route>
+          <Route path = '/privateData'><SecretData 
+                                        tokenValue={tokenValue}
+                                        /></Route>
           <Route path = '*' component={notfound}/>
         </Switch>  
         <Footer/>

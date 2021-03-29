@@ -29,12 +29,12 @@ router.post('/register', async (req, res) =>{
         email: req.body.email,
         gender: req.body.gender,
         password: hashedPassword
-        //date: Date.now
+        //date: Date.now -> MongoDB already handle for us.
     });
 
     try{
         const savedUser = await user.save();
-        res.send(savedUser);
+        res.status(200).send(savedUser);
     }catch(err){
         res.status(400).send(err);
     }
@@ -59,14 +59,14 @@ router.post('/login', async (req, res) =>{
 
     //Set cookie
     //maxAge in ms
-    res.cookie('auth-token', token, {
-        httpOnly: true,
-        maxAge: 1000 * maxAgeVal
-    });
+    // res.cookie('auth-token', token, {
+    //     httpOnly: true,
+    //     maxAge: 1000 * maxAgeVal
+    // });
 
-    //res.header('auth-token', token).send(token);
-
-    res.send('Login');
+    // res.header('auth-token', token);
+    res.header('auth-token', token).send(token);
+    
 });
 
 module.exports = router;

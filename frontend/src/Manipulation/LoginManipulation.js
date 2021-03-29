@@ -1,7 +1,7 @@
 import axiosObj from '../axiosCredentials';
 //import axios from 'axios'
 
-const checkLogin = (usernameInput, pw) =>{
+const checkLogin = (usernameInput, pw, setTokenValue, setNowLogin) =>{
     console.log(usernameInput + ' ' + pw);
 
     axiosObj.API.post('api/user/login', {
@@ -10,6 +10,9 @@ const checkLogin = (usernameInput, pw) =>{
     })
     .then(res =>{
         console.log(res.data);
+        setTokenValue(res.data);
+        setNowLogin(true);
+        // window.location.href='/privateData';
     })
     .catch(err =>{
         console.log(err.response.data);
