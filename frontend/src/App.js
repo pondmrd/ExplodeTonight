@@ -24,7 +24,8 @@ function App() {
   const news = () => <News />
   const notfound = () => <NotFound404/>
   const login = () => <Login setTokenValue={setTokenValue} 
-                             setNowLogin={setNowLogin} />
+                             setNowLogin={setNowLogin} 
+                             nowLogin={nowLogin}/>
 
   return (
     <Router>

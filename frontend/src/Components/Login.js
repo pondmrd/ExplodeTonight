@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Styles from './Login.module.css'
 import frogy from '../Images/frogy.jpg'
 import manipulationObj from '../Manipulation/LoginManipulation'
@@ -27,12 +27,14 @@ function Login(props){
 
         //clear input form
         setAccount({ username: "", password: "" })
+
+        //window.location.href='/privateData';
     }
 
     return (
         <div className={Styles.loginpage}>
             <h1> Welcome to our website </h1>
-            <div className={Styles.inputform}>
+            { !props.nowLogin && <div className={Styles.inputform}>
                 <img src={frogy}></img>
                 <br/>
                 <div className={Styles.form}>
@@ -54,9 +56,8 @@ function Login(props){
                         </div> 
                     </form>
                 </div>
-                {/* <br />
-                <h1>{JSON.stringify(account)}</h1> */}
-            </div>
+            </div>}
+            {/* <h2>{props.nowLogin && 'Welcome !'}</h2> */}
         </div>
     )
 }

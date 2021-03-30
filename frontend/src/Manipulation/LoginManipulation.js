@@ -13,9 +13,15 @@ const checkLogin = (usernameInput, pw, setTokenValue, setNowLogin) =>{
         setTokenValue(res.data);
         setNowLogin(true);
         // window.location.href='/privateData';
+        
+        //save states in local storage
+        localStorage.setItem('savedStates', JSON.stringify({
+            'tokenValue': res.data
+        }));
+
     })
     .catch(err =>{
-        console.log(err.response.data);
+        alert(err.response.data);
     });
 }
 
