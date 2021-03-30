@@ -50,11 +50,20 @@
     padding: 20px;
     margin-right: 20px;
 }
-.menus a:nth-child(1){
+/* .menus a:nth-child(1){
     border-bottom: 1px solid;
     color: brown;
-}
+} */
 .menus a:hover{
     border-bottom: 2px solid;
     color: brown;
+}
+
+.menus div {
+    display: inline-block;
+    /* border: solid 3px red; */
+    position: absolute;
+    margin-right: 5px;
+    right: 0px;
+
 }

@@ -67,9 +67,11 @@ const Navbar = (props) => {
                         <Link to='/news'>ข่าวสาร</Link>
                         {props.nowLogin && <Link to='/privateData'>ข้อมูลลับ</Link>}
                         <Link to='/aboutme'>รู้จักกับเรา</Link>
-                        {!props.nowLogin && <Link to='/register'>Register</Link>}
-                        {!props.nowLogin && <Link to='/login'>Login</Link>}
-                        {props.nowLogin && <Link to='/' onClick={toLogout}>Logout</Link>}
+                        <div>
+                            {!props.nowLogin && <Link to='/register'>Register</Link>}
+                            {!props.nowLogin && <Link to='/login'>Login</Link>}
+                            {props.nowLogin && <Link to='/' onClick={toLogout}>Logout</Link>}
+                        </div>
                     </div>
                 </div>
                 
