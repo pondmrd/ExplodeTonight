@@ -11,8 +11,8 @@ function Register() {
         confirmPassword:""
     })
     const [warning, setWarning] = useState({
-        warning1 : false,
-        warning2 : false
+        warning1 : true,
+        warning2 : true
     })
 
     const onChangeName = (e) =>{
@@ -54,10 +54,14 @@ function Register() {
 
     }
     useEffect(() =>{
-        if (userInfo.password != userInfo.confirmPassword){
-            setWarning({...warning, warning1 : true})
-        }else{
+        console.log('run useEffect')
+        if ( userInfo.password == userInfo.confirmPassword){
             setWarning({...warning, warning1 : false})
+            console.log('ok')
+            
+        }else{
+            console.log('gg')
+            setWarning({...warning, warning1 : true})
         }
         if (userInfo.name === "" || userInfo.lastname === "" ||
                 userInfo.email === "" || userInfo.password === "" ||
@@ -67,7 +71,7 @@ function Register() {
         }else{
             setWarning({...warning, warning2 : false})
         }
-    },[])
+    },[userInfo])
     return (
         <div>
             <div>
@@ -108,8 +112,11 @@ function Register() {
                     />
                     <br/>
                 </form>
-                {warning.warning1 ? <p>"รหัสผ่านไม่ตรงกัน"</p>: ""}
+                {warning.warning1 ? <p>"รหัสผ่านไม่ตรงกัน"</p> : ""}
                 {warning.warning2 ? <p>"ห้ามเว้นว่างแม้แต่ช่องเดียว"</p> : ""}
+                <p>{userInfo.password}</p>
+                <p>{userInfo.confirmPassword}</p>
+                <p>{userInfo.password==userInfo.confirmPassword && 'hello'}</p>
             </div>
         </div>
     )

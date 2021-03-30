@@ -14,7 +14,7 @@ import SecretData from './Components/SecretData'
 function App() {
 
   const [tokenValue, setTokenValue] = useState('');
-  const [nowLogin, setNowLogin] = useState(true);
+  const [nowLogin, setNowLogin] = useState(false);
 
   const content = () => 
   <Content title={data[0].title} date={data[0].date}
