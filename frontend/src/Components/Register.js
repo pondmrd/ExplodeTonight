@@ -71,6 +71,7 @@ function Register() {
             console.log('Error is ->');
             console.error(err);
             console.error(err.response);
+            alert(err.response.data);
         }
 
     }
