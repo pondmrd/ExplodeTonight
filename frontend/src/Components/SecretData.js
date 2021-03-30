@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axiosObj from '../axiosCredentials';
+import Styles from './SecretData.module.css'
 
 function SecretData(props){
 
@@ -27,10 +28,8 @@ function SecretData(props){
 
     return (
         <div>
-            <h4>Our token value is {props.tokenValue}</h4>
-            <p style={{
-                marginLeft: '5px'
-            }}>{data}</p>
+            <h4 className={Styles.container}>Our token value is {props.tokenValue}</h4>
+            <p className={Styles.container}>{data}</p>
         </div>
     )
 }
