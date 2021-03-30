@@ -39,9 +39,9 @@ function App() {
           <Route path = '/news' component={news}/>
           <Route path = '/login' component={login} />
           <Route path = '/register'><Register/></Route>
-          <Route path = '/privateData'><SecretData 
+          { nowLogin && <Route path = '/privateData'><SecretData 
                                         tokenValue={tokenValue}
-                                        /></Route>
+                                        /></Route>}
           <Route path = '*' component={notfound}/>
         </Switch>  
         <Footer/>

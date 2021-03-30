@@ -16,6 +16,11 @@ function SecretData(props){
         })
         .catch(err =>{
             console.log(err);
+            // console.error(err);
+            // console.error(err.response);
+            //console.error(err.data);
+            console.error(err.response.data);
+            setData(err.response.data);
         });
 
     }, []);
